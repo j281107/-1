@@ -124,3 +124,78 @@ int main ()
     
     
 }
+
+
+8.#include <iostream> 
+using namespace std;
+int main()
+{
+setlocale(LC_ALL, "rus");
+float ta1, ta2, ta3, tb1, tb2, tb3, ra1, ra2, ra3, rb1, rb3, rc1, rc2;
+
+cout << "Введите начало разговора (часы): ";
+cin >> ta1;
+cout << "Введите начало разговора (минуты): ";
+cin >> ta2;
+cout << "Введите начало разговора (секунды): ";
+cin >> ta3;
+
+cout << "Введите завершение разговора (часы): ";
+cin >> tb1;
+cout << "Введите завершение разговора (минуты): ";
+cin >> tb2;
+cout << "Введите завершение разговора (секунды): ";
+cin >> tb3;
+
+ra1 = tb1 - ta1;
+ra2 = tb2 - ta2;
+ra3 = tb3 - ta3;
+
+rb1 = ra1 * 60;
+rb3 = ra3 / 60;
+
+rc1 = rb1 + rb3 + ra2;
+rc2 = rc1*0.3;
+
+cout << "Стоимость разговора: " << rc2;
+system("pause");
+    
+}
+
+
+
+9.#include <iostream>
+using namespace std;
+ 
+ 
+int main()
+{
+    setlocale(LC_CTYPE, "rus"); 
+    float a,b,c;
+    float d,e;
+    cout << "Введите стоимость бензина а за литр: ";
+    cin >> a;
+    cout << "Введите стоимость бензина b за литр: ";
+    cin >> b;
+    cout << "Введите стоимость бензина с за литр: ";
+    cin >> c;
+    cout << "Сколько у Вас денег: ";
+    cin >> d;
+    cout << "Расход Вашего двигателя в литрах на 100 км: ";
+    cin >> e;
+    e = e / 100;
+    if (d > 0)
+    {
+            float benza = d / a;
+            float benzb = d / b;
+            float benzc = d / c;
+            float dalna = benza * e * 100 ;
+            float dalnb = benzb * e * 100;
+            float dalnc = benzc * e  * 100;
+            cout << "На  " << d << " рублей вы сможете купить " << benza << " литров бензина A, и проедете " << dalna <<" км" <<"\n";
+            cout << "На  " << d << " рублей вы сможете купить " << benzb << " литров бензина B, и проедете " << dalnb <<" км" <<"\n";
+            cout << "На  " << d << " рублей вы сможете купить " << benzc << " литров бензина C, и проедете " << dalnc <<" км" <<"\n";
+    }
+            system("pause");
+    return 0;
+}
