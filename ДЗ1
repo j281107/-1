@@ -70,3 +70,22 @@ int main()
     return 0;
 
 }
+
+5. #include <iostream>
+   using namespace std;
+int main()
+{
+    setlocale (LC_ALL, "RU");
+    double S, pi, R, L;
+    cout << "Введите длину окружности \n\n";
+    cin >> L;
+    cout << "\n\n";
+    pi = 3.14;
+    R = L / (2 * pi);
+    S = pi * (R * 2);
+    cout << "Площадь окружности = " << S << endl;
+    
+    
+    return 0;
+
+}
