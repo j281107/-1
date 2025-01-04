@@ -104,3 +104,23 @@ int main()
     return 0;
 
 }
+
+7. #include using namespace std;
+
+int main ()
+{    
+    setlocale (LC_ALL, "ru");    
+    int t, s, v;    
+    cout << "Введите расстояние до аэропорта (в км): ";   
+    cin >> s;    
+    cout << "Введите время, за которое нужно доехать (в часах): ";   
+    cin >> t;   
+    v = s\t;    
+    cout << "Вам нужно ехать со скоростью: " << v << " км/ч" << endl;    
+    system ("pause");    
+   
+   
+    return 0;
+    
+    
+}
